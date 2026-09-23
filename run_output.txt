@@ -1,0 +1,60 @@
+Dataset shape: (569, 30)
+Classes: {np.str_('malignant'): 0, np.str_('benign'): 1}
+
+======================================================================
+Logistic Regression
+======================================================================
+              precision    recall  f1-score   support
+
+   malignant       0.98      0.98      0.98        42
+      benign       0.99      0.99      0.99        72
+
+    accuracy                           0.98       114
+   macro avg       0.98      0.98      0.98       114
+weighted avg       0.98      0.98      0.98       114
+
+
+======================================================================
+Decision Tree
+======================================================================
+              precision    recall  f1-score   support
+
+   malignant       0.87      0.93      0.90        42
+      benign       0.96      0.92      0.94        72
+
+    accuracy                           0.92       114
+   macro avg       0.91      0.92      0.92       114
+weighted avg       0.92      0.92      0.92       114
+
+
+======================================================================
+Random Forest
+======================================================================
+              precision    recall  f1-score   support
+
+   malignant       0.93      0.93      0.93        42
+      benign       0.96      0.96      0.96        72
+
+    accuracy                           0.95       114
+   macro avg       0.94      0.94      0.94       114
+weighted avg       0.95      0.95      0.95       114
+
+
+Model comparison:
+              Model  Accuracy  Precision   Recall  F1 Score  ROC AUC
+Logistic Regression  0.982456   0.986111 0.986111  0.986111 0.995370
+      Random Forest  0.947368   0.958333 0.958333  0.958333 0.993717
+      Decision Tree  0.921053   0.956522 0.916667  0.936170 0.916336
+
+Results saved in: /mnt/data/predictive_modeling_ml/results
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
